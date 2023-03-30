@@ -1,0 +1,86 @@
+main {
+    width: 500px;
+    height: 410px;
+    display: inline-block;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    margin-top: 10vh;
+    text-align: -webkit-center;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: start;
+    margin: 15px;
+    font-size: 22px;
+}
+
+hr {
+    height: 0.5px;
+    border: none;
+    background-color: #E5E5E5;
+}
+
+a{
+    text-decoration: none;
+    background-color: #E4E6EB;
+    font-size: 14px;
+    padding: 9px 20px;
+    border-radius: 8px;
+    color: black;
+}
+
+.flex_container{
+    display: flex;
+    align-items: center;
+    margin: 15px 21px 5px 21px;
+    justify-content: space-between;
+}
+
+.name_value{
+    padding: 10px;
+    text-align: start;
+    height: 50px;
+    border-radius: 8px;
+    border: 1px solid #E1E5ED;
+    outline: none;
+    font-size: 16px;
+}
+
+select {
+    border: 1px solid #E1E5ED;
+    outline: none;
+    width: 100px;
+    height: 50px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.long_input{
+    margin: 5px 4%;
+    padding: 10px;
+    text-align: start;
+    width: -webkit-fill-available;
+    height: 50px;
+    border-radius: 8px;
+    border: 1px solid #E1E5ED;
+    outline: none;
+    font-size: 16px;
+}
+
+.phone_value{
+    margin-bottom: 16px;
+}
+
+.submit_button{
+    width: 150px;
+    height: 50px;
+    margin: 19px;
+    border: none;
+    border-radius: 8px;
+    font-size: 22px;
+    font-weight: bold;
+    background-color: #42B72A;
+    color: #FFF;
+    cursor: pointer;
+}

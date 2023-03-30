@@ -1,0 +1,194 @@
+header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+a {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+.logo {
+    height: 8vh;
+}
+
+.header_buttons {
+    background-color: #1877F2;
+    font-size: 22px;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;  
+    padding: 15px 35px;
+    margin: 10px;
+    cursor: pointer;
+    
+}
+
+.my_name {
+    padding: 5px 30px;
+    background-color: #1877F2;
+    font-size: 22px;
+    color: #FFFFFF;
+    border-radius: 6px;
+    
+}
+
+nav {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 55px;
+}
+
+.arrow_blue {
+    width: 70px;
+    margin: 0px 30px;
+    cursor: pointer;
+}
+
+.reverse_arrow{
+    transform: rotate(180deg);
+}
+
+aside {
+    position: fixed;
+    bottom: 0;
+    left: -300px;
+    height: 90vh;
+    width: 300px;
+    background-color: #FFFFFF;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: 0.5s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.teammate_name {
+    width: 190px;
+    background-color: #1877F2;
+    font-size: 22px;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    padding: 15px 0px;
+    margin: 14px;
+    cursor: pointer;
+}
+
+main {
+    text-align: -webkit-center;
+}
+
+.date {
+    width: 100vh;
+    font-size: 22px;
+    color: #FFF;
+    background-color: #1877F2;
+    margin: 30px 0;
+}
+
+section {
+    width: 100vh;
+    background-color: #FFF;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.time {
+    display: inline-flex;
+    width: 6%;
+    justify-content: end;
+}
+
+.contents{
+    text-align: start;
+    width: 80%;
+}
+
+.section_buttons{
+    display: flex;
+    align-items: center;
+    width: 10%;
+    justify-content: space-around;
+}
+
+.modify_button{
+    height: -webkit-fill-available;
+    background: none;
+    border: 1.5px solid #E5E5FF;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 50px;
+}
+
+.x {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.x img {
+    width: 10px;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: -300px;
+    background-color: #FFFFFF;
+    border-radius: 20px 20px 0 0;
+    width: 500px;
+    height: 250px;
+    padding: 10px;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: 0.5s;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
+}
+
+.choose_date{
+    width: 150px;
+    height: 25px;
+}
+
+.choose_time{
+    width: 150px;
+    height: 25px;
+}
+
+.type_contents {
+    width: -webkit-fill-available;
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    text-align: start;
+    border: 1px solid #AACBF5;
+    border-radius: 10px;
+    height: 100px;
+    outline: none;
+}
+
+.type_contents:focus {
+    border: 1px solid #1877F2;
+
+}
+
+.add_schedule_button{
+    background-color: #42B72A;
+    font-size: 22px;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;  
+    padding: 5px 30px;
+    margin: 10px;
+    cursor: pointer;
+}
