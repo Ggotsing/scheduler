@@ -1,8 +1,8 @@
-console.log(<%=nameList%>)
-
-if (<%=nameList%>.length === 0) {
-  alert("로그인 실패\nid나 pw를 확인해주세요")
-  location.href = "index.html"
+console.log(<%=name_value%>);
+if ('<%=name_value%>' === null || '<%=name_value%>' === 'null' || '<%=name_value%>' === '' || '<%=name_value%>' === "" ) {
+    window.opener.showAlert();
+    window.close();
 } else {
-    location.href = "main.jsp"
+    window.opener.location.href = "../JSP/main.jsp";
+    window.close();
 }

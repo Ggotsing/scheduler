@@ -1,3 +1,7 @@
+#login {
+    display: none;
+}
+
 .logo {
     height: 90%;
 }
@@ -23,6 +27,7 @@ a {
     color: #1877F2;
     font-size: 14px;
     padding: 10px;
+    cursor: pointer
 }
 
 input {
@@ -74,6 +79,7 @@ span{
     color: #FFF;
     font-size: 20px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 

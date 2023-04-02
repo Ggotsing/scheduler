@@ -3,25 +3,8 @@
 <%@ page import="java.sql.*" %>
 <%@ page import="java.util.*" %>
 <%
-
     String id_value = (String)session.getAttribute("id_value");
-    String name_value = "";
-    
-    Class.forName("com.mysql.jdbc.Driver");
-    Connection connect = DriverManager.getConnection("jdbc:mysql://localhost/scheduler_DB", "stageus", "1234");
-    
-    String sql = "select name from user where id=?";
-
-    PreparedStatement query = connect.prepareStatement(sql);
-    
-    query.setString(1, id_value);
-
-    ResultSet result = query.executeQuery();
-
-    while(result.next()) {
-        name_value = result.getString(3);
-    }
-
+    String name_value = (String)session.getAttribute("name_value");
 %>
 
 <!DOCTYPE html>
@@ -47,6 +30,7 @@
         </div>
         <div class="my_name">
             <p>이민재 사원</p>
+            <p><%=id_value%></p>
             <p><%=name_value%></p>
         </div>
     </header>

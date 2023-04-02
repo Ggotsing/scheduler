@@ -16,4 +16,3 @@ function add_schedule() {
         footer[0].style.bottom = "0px";
     }
 }
-

@@ -19,17 +19,27 @@
             placeholder="아이디를 입력하세요">
             <input name="pw_value" class="value" type="password"
             placeholder="비밀번호를 입력하세요">
-            <input type="submit" id="login_button" value="로그인" style="cursor: pointer">
+            <input type="submit" id="login_button" value="로그인"
+             onclick="loginEvent()">
         </form>
         <div>
-            <a href="./JSP/find_ID.jsp" style="cursor: pointer">아이디를 잊으셨나요?</a>
-            <a href="./JSP/find_PW.jsp" style="cursor: pointer">비밀번호를 잊으셨나요?</a>
+            <a href="./JSP/find_ID.jsp" >아이디를 잊으셨나요?</a>
+            <a href="./JSP/find_PW.jsp" >비밀번호를 잊으셨나요?</a>
         </div>
             <hr/><span>또는</span><hr/>
         </div>
         <input id="create_account" type="button" value=" 새 계정 만들기 "  style="cursor: pointer"
         onclick="location.href='http://13.209.3.205:8080/scheduler/JSP/create_account.jsp'">
     </main>
-    <script src="./JavaScript/index.js"></script>
+    <script>
+        console.log(<%=name_value%>);
+if ('<%=name_value%>' === null || '<%=name_value%>' === 'null' || '<%=name_value%>' === '' || '<%=name_value%>' === "" ) {
+    window.opener.showAlert();
+    window.close();
+} else {
+    window.opener.location.href = "../JSP/main.jsp";
+    window.close();
+}
+    </script>
 </body>
 </html>

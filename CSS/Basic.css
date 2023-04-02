@@ -19,6 +19,9 @@
     background: rgba(33, 122, 244, .1);  /*스크롤바 뒷 배경 색상*/
 }
 
+//css 루트객체 - css 에서 만드는 전역 변수 (link)
+//ex - blue = #217af4; 로 사용가능
+
 body {
     background-color:#F0F2F5;
 

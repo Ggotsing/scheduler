@@ -1,5 +1,7 @@
 function loginEvent()
 {
-   window.open("./JSP_Action/login_action.jsp", "popup", "width=200, height=200, resizable=no, scrollbars=no") ;
-   
+    window.open("./JSP_Action/login_action.jsp", "login", "width=300, height=150 ");
+}
+function showAlert() {
+    alert("로그인 실패\nid나 pw를 확인해주세요");
 }

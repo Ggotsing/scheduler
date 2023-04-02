@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html" pageEncoding="utf-8" %>
 <%@ page import="java.sql.*" %>
-<%@ page import="java.util.ArrayList" %>
 <%
     request.setCharacterEncoding("UTF-8");
 
@@ -19,20 +18,16 @@
 
     ResultSet result = query.executeQuery();
 
-    ArrayList<String> id_list = new ArrayList<String>();
-    ArrayList<String> name_list = new ArrayList<String>();
-        while(result.next()) {
-            String tmpId = result.getString(1);   
-            String tmpName = result.getString(3);  
-            id_list.add("\"" + tmpId + "\"");  
-            name_list.add("\"" + tmpName + "\"");  
-          };
+    String name_value = "";
+    session.removeAttribute("id_value");
+    session.removeAttribute("name_value");
 
-    if(id_list.size() > 0) {
-        session.setAttribute("id", id_list.get(0));
-        response.sendRedirect("../JSP/main.jsp");
-    } else {
-        response.sendRedirect("../index.html");
+    while(result.next()){ 
+        id_value = result.getString("id");
+        name_value = result.getString("name");
+    
+        session.setAttribute("id_value", id_value);
+        session.setAttribute("name_value", name_value);    
     }
 %>
 <!DOCTYPE html>
@@ -43,7 +38,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body> 
     <script src="../JavaScript/login_action.js"></script>
 </body>
 </html>
