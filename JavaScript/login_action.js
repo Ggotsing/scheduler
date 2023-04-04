@@ -1,5 +1,6 @@
-console.log(<%=name_value%>);
-if ('<%=name_value%>' === null || '<%=name_value%>' === 'null' || '<%=name_value%>' === '' || '<%=name_value%>' === "" ) {
+var name_value = document.getElementById("name_value").innerHTML; 
+console.log(name_value)
+if (name_value == 'null') {
     window.opener.showAlert();
     window.close();
 } else {

@@ -1,4 +1,7 @@
-
+var id_value = document.getElementById("id_value").innerHTML; 
+var name_value = document.getElementById("name_value").innerHTML; 
+console.log(id_value);
+console.log(name_value);
 function move_aside() {
     var aside = document.getElementsByTagName("aside");
     if (aside[0].style.left == "0px") {

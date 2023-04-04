@@ -14,10 +14,11 @@
     </header>
     <main>
         <h1>환영합니다 !</h1>
-        <form action="./JSP_Action/login_action.jsp" name="login_form" id="login_form" method="post">
-            <input name="id_value" class="value" type="text" 
+        <!--  action="./JSP_Action/login_action.jsp"  -->
+        <form name="login_form" id="login_form" method="post">
+            <input name="input_id" class="value" type="text" 
             placeholder="아이디를 입력하세요">
-            <input name="pw_value" class="value" type="password"
+            <input name="input_pw" class="value" type="password"
             placeholder="비밀번호를 입력하세요">
             <input type="submit" id="login_button" value="로그인"
              onclick="loginEvent()">
@@ -31,15 +32,6 @@
         <input id="create_account" type="button" value=" 새 계정 만들기 "  style="cursor: pointer"
         onclick="location.href='http://13.209.3.205:8080/scheduler/JSP/create_account.jsp'">
     </main>
-    <script>
-        console.log(<%=name_value%>);
-if ('<%=name_value%>' === null || '<%=name_value%>' === 'null' || '<%=name_value%>' === '' || '<%=name_value%>' === "" ) {
-    window.opener.showAlert();
-    window.close();
-} else {
-    window.opener.location.href = "../JSP/main.jsp";
-    window.close();
-}
-    </script>
+    <script src="./JavaScript/index.js"></script>
 </body>
 </html>

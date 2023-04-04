@@ -3,8 +3,11 @@
 <%
     request.setCharacterEncoding("UTF-8");
 
-    String id_value = request.getParameter("id_value");
-    String pw_value = request.getParameter("pw_value");
+    session.removeAttribute("id_value");
+    session.removeAttribute("name_value");
+
+    String input_id = request.getParameter("input_id");
+    String input_pw = request.getParameter("input_pw");
 
     Class.forName("com.mysql.jdbc.Driver");
     Connection connect = DriverManager.getConnection("jdbc:mysql://localhost/scheduler_DB", "stageus", "1234");
@@ -13,22 +16,21 @@
 
     PreparedStatement query = connect.prepareStatement(sql);
 
-    query.setString(1, id_value);
-    query.setString(2, pw_value);
+    query.setString(1, input_id);
+    query.setString(2, input_pw);
 
     ResultSet result = query.executeQuery();
 
-    String name_value = "";
-    session.removeAttribute("id_value");
-    session.removeAttribute("name_value");
-
     while(result.next()){ 
-        id_value = result.getString("id");
-        name_value = result.getString("name");
-    
+        String id_value = result.getString("id");
+        String name_value = result.getString("name");
+        
         session.setAttribute("id_value", id_value);
         session.setAttribute("name_value", name_value);    
     }
+
+    String name_value = (String)session.getAttribute("name_value");
+    
 %>
 <!DOCTYPE html>
 <html lang="kr">
@@ -39,6 +41,7 @@
     <title>Document</title>
 </head>
 <body> 
+    <div id="name_value" style="display: none;"><%=name_value%></div>
     <script src="../JavaScript/login_action.js"></script>
 </body>
 </html>

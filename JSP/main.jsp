@@ -30,8 +30,8 @@
         </div>
         <div class="my_name">
             <p>이민재 사원</p>
-            <p><%=id_value%></p>
-            <p><%=name_value%></p>
+            <p id="id_value"><%=id_value%></p>
+            <p id="name_value"><%=name_value%></p>
         </div>
     </header>
     <nav>
