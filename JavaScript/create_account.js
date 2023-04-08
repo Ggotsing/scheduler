@@ -20,3 +20,8 @@ function create_account_event(){
         document.create_account_form.submit();
     }
 }
+//1
+
+function check_duplication(){
+    
+}

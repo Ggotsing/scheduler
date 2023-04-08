@@ -16,10 +16,10 @@
     <main>
         <h1>회원가입</h1>
         <hr>
-        <!-- action="../JSP_Action/create_account_action.jsp" -->
         <form name="create_account_form">
             <div class="flex_container">
                 <input name="name_value" id="name_value" class="name_value" type="text" placeholder="이름">
+                <input type="button" id="check_duplication" onclick="check_duplication()">
                 <select name="position_value">
                     <option value="사원">사원</option>
                     <option value="팀장">팀장</option>
